@@ -1,0 +1,18 @@
+# sent_id = demo-1
+# text = 四个 token，HEAD 依次为 3 4 0 3：合法但非投射（节点 4 的子树为 {2,4}，缺 3）。
+1	看	看	VERB	_	_	3	dep	_	_
+2	一	一	NUM	_	_	4	nummod	_	_
+3	电影	电影	NOUN	_	_	0	root	_	_
+4	场	场	NOUN	_	_	3	dep	_	_
+
+# sent_id = demo-2
+# text = 全部连续的链：投射。
+1	我	我	PRON	_	_	2	nsubj	_	_
+2	爱	爱	VERB	_	_	3	dep	_	_
+3	看	看	VERB	_	_	0	root	_	_
+4	。	。	PUNCT	_	_	3	punct	_	_
+
+# sent_id = demo-3
+# text = 结构非法示例：token 1 自指，整句分类为 invalid。
+1	甲	甲	X	_	_	1	dep	_	_
+2	乙	乙	X	_	_	0	root	_	_
