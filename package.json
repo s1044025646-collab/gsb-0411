@@ -1,0 +1,19 @@
+{
+  "name": "conllu-projectivity-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "受限 CoNLL-U 依存树与非投射子树核验后端（API + CLI）",
+  "main": "dist/cli.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"dist/test/*.test.js\"",
+    "start": "npm run build && node dist/src/cli.js serve",
+    "demo": "npm run build && node dist/src/cli.js demo",
+    "cli": "node dist/src/cli.js"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "typescript": "^5.5.0"
+  }
+}

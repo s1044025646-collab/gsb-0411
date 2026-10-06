@@ -1,0 +1,35 @@
+# demo-1 non-projective: HEAD 3,4,0,3
+1	甲	甲	PROPN	_	_	3	nsubj	_	_
+2	乙	乙	PROPN	_	_	4	nsubj	_	_
+3	走	走	VERB	_	_	0	root	_	_
+4	来	来	VERB	_	_	3	conj	_	_
+
+# demo-2 projective chain
+1	我	我	PRON	_	_	2	nsubj	_	_
+2	认真	认真	ADV	_	_	3	advmod	_	_
+3	阅读	阅读	VERB	_	_	4	xcomp	_	_
+4	学习	学习	VERB	_	_	0	root	_	_
+
+# demo-3 multi-root rejected
+1	他	他	PRON	_	_	0	root	_	_
+2	走	走	VERB	_	_	0	root	_	_
+
+# demo-4 cycle rejected
+1	甲	甲	NOUN	_	_	2	det	_	_
+2	乙	乙	NOUN	_	_	1	det	_	_
+3	丙	丙	NOUN	_	_	0	root	_	_
+
+# demo-5 self-head rejected
+1	丁	丁	NOUN	_	_	1	det	_	_
+2	戊	戊	NOUN	_	_	0	root	_	_
+
+# demo-6 cross-sentence HEAD rejected
+1	己	己	NOUN	_	_	9	det	_	_
+2	庚	庚	NOUN	_	_	0	root	_	_
+
+# demo-7 zh + comments + punctuation (projective)
+# sent_id = zh-1
+1	我	我	PRON	_	_	2	nsubj	_	_
+2	爱	爱	VERB	_	_	0	root	_	_
+3	北京	北京	PROPN	_	_	2	obj	_	_
+4	。	。	PUNCT	_	_	2	punct	_	_
